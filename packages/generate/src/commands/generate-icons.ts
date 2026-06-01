@@ -8,7 +8,7 @@ import { generateIconModule, generateIndexFile, kebabToPascal } from '../utils/i
 
 export async function generateIcons(packageDir: string) {
   const workspaceRoot = findWorkspaceRoot(packageDir)
-  const iconsSourceDir = path.join(workspaceRoot, '.lucide-cache', 'icons')
+  const iconsSourceDir = path.join(workspaceRoot, '.cache', 'icons')
   const outputDir = path.join(packageDir, 'src', 'icons')
   const indexFile = path.join(packageDir, 'src', 'index.ts')
 

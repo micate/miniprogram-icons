@@ -7,7 +7,7 @@ import { LUCIDE_REPO } from '../utils/icons'
 
 export async function fetchIcons(packageDir: string) {
   const workspaceRoot = findWorkspaceRoot(packageDir)
-  const cacheDir = path.join(workspaceRoot, '.lucide-cache')
+  const cacheDir = path.join(workspaceRoot, '.cache')
   const iconsSourceDir = path.join(cacheDir, 'icons')
   const gitIndexLock = path.join(cacheDir, '.git', 'index.lock')
 

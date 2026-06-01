@@ -1,7 +1,7 @@
 {
   "name": "miniprogram-tabbar",
   "version": "1.5.2",
-  "description": "CLI for generating WeChat miniprogram TabBar PNG icons from Lucide with normal and active states for Taro projects",
+  "description": "CLI for generating WeChat miniprogram TabBar PNG icons from with normal and active states for Taro projects",
   "main": "dist/index.js",
   "bin": {
     "miniprogram-tabbar": "./dist/index.js"
@@ -17,7 +17,6 @@
     "prepublishOnly": "npm run build"
   },
   "keywords": [
-    "lucide",
     "taro",
     "cli",
     "tabbar",
@@ -33,7 +32,6 @@
     "url": "git+https://github.com/micate/miniprogram-icons.git",
     "directory": "packages/miniprogram-tabbar"
   },
-  "homepage": "https://lucide.rocke.top",
   "bugs": {
     "url": "https://github.com/micate/miniprogram-icons/issues"
   },

@@ -1,6 +1,6 @@
 ---
 name: miniprogram-icons
-description: 在 Taro 微信小程序和 Web 项目中使用 Lucide 图标。当用户需要在 Taro 项目中添加图标、使用 lucide 图标库、生成 TabBar 图标时使用此技能。
+description: 在 Taro 微信小程序和 Web 项目中使用图标。当用户需要在 Taro 项目中添加图标、生成 TabBar 图标时使用此技能。
 ---
 
 # miniprogram-icons
@@ -84,7 +84,7 @@ import { House } from 'miniprogram-icons/icons/house';
 
 ## 图标列表
 
-所有图标名称与 [Lucide 官方](https://lucide.dev/icons/) 保持一致，使用 PascalCase 命名。
+所有图标名称使用 PascalCase 命名。
 
 常用图标：`House`、`Settings`、`User`、`Search`、`Menu`、`ChevronRight`、`Check`、`X`、`Plus`、`Minus`、`Heart`、`Star`、`Camera`、`Image`、`Share`、`Download`、`Upload`
 

@@ -8,7 +8,7 @@
 - **动态颜色支持**：运行时动态修改图标颜色
 - **Tree Shaking**：每个图标独立模块，只打包你使用的图标
 - **TypeScript 支持**：完整的类型定义
-- **与 lucide-react 一致的 API**：支持 `size`、`color`、`strokeWidth`、`absoluteStrokeWidth` 等属性
+- 支持 `size`、`color`、`strokeWidth`、`absoluteStrokeWidth` 等属性
 - **实心图标支持**：通过 `filled` 渲染实心图标（如 Heart）
 - **CLI 工具**：支持生成小程序 TabBar 所需的 PNG 图标
 
@@ -256,11 +256,9 @@ npm test
 │   ├── miniprogram-icons-find/          # 图标查找 CLI 包
 │   └── miniprogram-icons-show/          # 终端预览 CLI 包
 ├── docs/                          # 文档站
-└── .lucide-cache/                 # Lucide 上游图标缓存
+└── .cache/                 # 上游图标缓存
 ```
 
 ## License
 
-ISC + MIT (与 Lucide LICENSE 保持一致)
-
-图标版权归 [Lucide](https://github.com/lucide-icons/lucide) 所有。
+ISC + MIT

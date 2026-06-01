@@ -6,7 +6,7 @@ export default function InstallationPage() {
     <div className="flex flex-col gap-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div className="flex flex-col gap-2">
         <h1 className="text-3xl font-bold tracking-tight">安装 (Installation)</h1>
-        <p className="text-muted-foreground">在你的 Taro 项目中引入并使用 lucide-react-taro 图标库。</p>
+        <p className="text-muted-foreground">在你的 Taro 项目中引入并使用 miniprogram-icons 图标库。</p>
       </div>
 
       <section className="flex flex-col gap-4">
@@ -16,7 +16,7 @@ export default function InstallationPage() {
             安装完成后，就可以直接从主入口导入图标组件，在 Taro 页面里使用。
           </p>
         </div>
-        <InstallTabs packageName="lucide-react-taro" />
+        <InstallTabs packageName="miniprogram-icons" />
       </section>
 
       <section className="flex flex-col gap-4">

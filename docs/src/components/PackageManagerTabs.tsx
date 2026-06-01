@@ -17,7 +17,7 @@ type PackageManagerTabsProps = {
   className?: string;
 };
 
-const PACKAGE_MANAGER_STORAGE_KEY = 'lucide-react-taro-package-manager';
+const PACKAGE_MANAGER_STORAGE_KEY = 'miniprogram-icons-package-manager';
 const PACKAGE_MANAGERS: PackageManager[] = ['pnpm', 'npm', 'yarn', 'bun'];
 
 const PackageManagerContext = createContext<PackageManagerContextValue | null>(null);

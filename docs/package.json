@@ -1,5 +1,5 @@
 {
-  "name": "@lucide-react-taro/docs",
+  "name": "@miniprogram-icons/docs",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,7 +15,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.477.0",
-    "lucide-react-taro": "workspace:*",
+    "miniprogram-icons": "workspace:*",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-router-dom": "^7.3.0",

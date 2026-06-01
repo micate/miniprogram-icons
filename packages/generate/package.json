@@ -1,10 +1,10 @@
 {
-  "name": "@lucide-react-taro/generate",
+  "name": "@miniprogram-icons/generate",
   "private": true,
   "version": "1.5.2",
   "type": "module",
   "bin": {
-    "lucide-react-taro-generate": "./bin/lucide-react-taro-generate.js"
+    "miniprogram-icons-generate": "./bin/miniprogram-icons-generate.js"
   },
   "dependencies": {
     "esbuild": "^0.27.3",

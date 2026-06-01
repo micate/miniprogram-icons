@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import * as LucideIcons from "lucide-react-taro";
+import * as LucideIcons from "miniprogram-icons";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { CodeBlock } from "@/components/CodeBlock";
@@ -171,7 +171,7 @@ export default function IconDetailPage() {
             <CodeBlock
               className="min-h-[214px]"
               language="tsx"
-              code={`import { ${iconName} } from 'lucide-react-taro';
+              code={`import { ${iconName} } from 'miniprogram-icons';
 
 <${iconName} 
   size={${size}} 

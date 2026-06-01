@@ -1,6 +1,6 @@
 import { useState, useMemo, useRef, memo, useTransition, useEffect } from "react";
 import { Link } from "react-router-dom";
-import * as LucideIcons from "lucide-react-taro";
+import * as LucideIcons from "miniprogram-icons";
 import { Search } from "lucide-react";
 
 const IconCard = memo(({ name }: { name: string }) => {

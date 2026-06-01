@@ -10,7 +10,7 @@ export default function LicensePage() {
 
       <div className="prose prose-slate dark:prose-invert max-w-none">
         <p>
-          本项目 (lucide-react-taro) 是对 Lucide 图标库的 Taro 框架封装。
+          本项目 (miniprogram-icons) 是对 Lucide 图标库的 Taro 框架封装。
           下方的开源协议复制自原始的 Lucide 项目 (<a href="https://github.com/lucide-icons/lucide" target="_blank" rel="noreferrer" className="text-primary hover:underline">https://github.com/lucide-icons/lucide</a>)。
           所有版权归 Lucide 及其贡献者所有。
         </p>

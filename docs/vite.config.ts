@@ -41,8 +41,8 @@ export default defineConfig({
             '@tarojs/components': fileURLToPath(
                 new URL('./src/shims/taro-components.tsx', import.meta.url),
             ),
-            'lucide-react-taro': fileURLToPath(
-                new URL('../packages/lucide-react-taro/src/index.ts', import.meta.url),
+            'miniprogram-icons': fileURLToPath(
+                new URL('../packages/miniprogram-icons/src/index.ts', import.meta.url),
             ),
         },
     },

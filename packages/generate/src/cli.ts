@@ -9,7 +9,7 @@ async function main() {
 
   if (!command) {
     fail(
-      'Usage: lucide-react-taro-generate <fetch-icons|generate-icons|build-lib|build-cli> --package-dir <dir> [options]',
+      'Usage: miniprogram-icons-generate <fetch-icons|generate-icons|build-lib|build-cli> --package-dir <dir> [options]',
     )
   }
 

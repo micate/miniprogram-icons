@@ -17,7 +17,7 @@ export default function UsagePage() {
           </h3>
           <CodeBlock
             language="tsx"
-            code={`import { House, Settings, Camera, Zap, Heart } from 'lucide-react-taro';
+            code={`import { House, Settings, Camera, Zap, Heart } from 'miniprogram-icons';
 
 function MyComponent() {
   return (
@@ -52,7 +52,7 @@ function MyComponent() {
           <p className="text-muted-foreground">使用文本颜色相关的 class 并不会改变图标的颜色。</p>
           <CodeBlock
             language="tsx"
-            code={`import { House } from 'lucide-react-taro';
+            code={`import { House } from 'miniprogram-icons';
 
 function MyComponent() {
   return (
@@ -72,7 +72,7 @@ function MyComponent() {
         </p>
         <CodeBlock
           language="tsx"
-          code={`import { LucideTaroProvider, House, Settings, Camera } from 'lucide-react-taro';
+          code={`import { LucideTaroProvider, House, Settings, Camera } from 'miniprogram-icons';
 
 function App() {
   return (
@@ -121,10 +121,10 @@ function App() {
         <CodeBlock
           language="tsx"
           code={`// ✅ 推荐：主入口导入（已优化打包速度，支持 tree-shaking）
-import { House, Settings, User } from 'lucide-react-taro';
+import { House, Settings, User } from 'miniprogram-icons';
 
 // 可选：子路径导入（适合只用少量图标的场景）
-import { House } from 'lucide-react-taro/icons/house';`}
+import { House } from 'miniprogram-icons/icons/house';`}
         />
       </section>
 

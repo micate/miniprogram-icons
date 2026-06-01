@@ -14,7 +14,7 @@ function bundleWithEsbuild(entryContent: string, filename: string) {
 
     fs.writeFileSync(entryPath, entryContent)
 
-    const aliasFlag = `--alias:lucide-react-taro=${path.join(PROJECT_ROOT, 'dist/esm/index.js')}`
+    const aliasFlag = `--alias:miniprogram-icons=${path.join(PROJECT_ROOT, 'dist/esm/index.js')}`
 
     execSync(
         `npx esbuild "${entryPath}" --bundle --outfile="${outPath}" ` +
@@ -51,7 +51,7 @@ describe('Tree-shaking E2E', () => {
 
         const result = bundleWithEsbuild(
             `
-import { House, Star } from 'lucide-react-taro';
+import { House, Star } from 'miniprogram-icons';
 export { House, Star };
 `,
             'few-icons.tsx',
@@ -71,7 +71,7 @@ export { House, Star };
     it('should include only the imported icons in the output', () => {
         const result = bundleWithEsbuild(
             `
-import { House, Star } from 'lucide-react-taro';
+import { House, Star } from 'miniprogram-icons';
 export { House, Star };
 `,
             'included-icons.tsx',
@@ -85,7 +85,7 @@ export { House, Star };
     it('should NOT include unused icons in the output', () => {
         const result = bundleWithEsbuild(
             `
-import { House, Star } from 'lucide-react-taro';
+import { House, Star } from 'miniprogram-icons';
 export { House, Star };
 `,
             'excluded-icons.tsx',
@@ -106,7 +106,7 @@ export { House, Star };
 
         const result = bundleWithEsbuild(
             `
-import { House, Star, Moon, Sun, Heart, Settings, User, Bell, Zap, Camera } from 'lucide-react-taro';
+import { House, Star, Moon, Sun, Heart, Settings, User, Bell, Zap, Camera } from 'miniprogram-icons';
 export { House, Star, Moon, Sun, Heart, Settings, User, Bell, Zap, Camera };
 `,
             'ten-icons.tsx',
@@ -142,15 +142,15 @@ export { House, Star, Moon, Sun, Heart, Settings, User, Bell, Zap, Camera };
         fs.writeFileSync(
             entryPath,
             `
-import { House } from 'lucide-react-taro/icons/house';
-import { Star } from 'lucide-react-taro/icons/star';
+import { House } from 'miniprogram-icons/icons/house';
+import { Star } from 'miniprogram-icons/icons/star';
 export { House, Star };
 `,
         )
 
-        const houseAlias = `--alias:lucide-react-taro/icons/house=${path.join(PROJECT_ROOT, 'dist/esm/icons/house.js')}`
-        const starAlias = `--alias:lucide-react-taro/icons/star=${path.join(PROJECT_ROOT, 'dist/esm/icons/star.js')}`
-        const barrelAlias = `--alias:lucide-react-taro=${path.join(PROJECT_ROOT, 'dist/esm/index.js')}`
+        const houseAlias = `--alias:miniprogram-icons/icons/house=${path.join(PROJECT_ROOT, 'dist/esm/icons/house.js')}`
+        const starAlias = `--alias:miniprogram-icons/icons/star=${path.join(PROJECT_ROOT, 'dist/esm/icons/star.js')}`
+        const barrelAlias = `--alias:miniprogram-icons=${path.join(PROJECT_ROOT, 'dist/esm/index.js')}`
 
         execSync(
             `npx esbuild "${entryPath}" --bundle --outfile="${outPath}" ` +
@@ -179,7 +179,7 @@ export { House, Star };
     it('should produce similar sizes for barrel vs deep imports of the same icons', () => {
         const barrelResult = bundleWithEsbuild(
             `
-import { House, Star } from 'lucide-react-taro';
+import { House, Star } from 'miniprogram-icons';
 export { House, Star };
 `,
             'barrel-vs-deep-barrel.tsx',
@@ -191,15 +191,15 @@ export { House, Star };
         fs.writeFileSync(
             deepEntryPath,
             `
-import { House } from 'lucide-react-taro/icons/house';
-import { Star } from 'lucide-react-taro/icons/star';
+import { House } from 'miniprogram-icons/icons/house';
+import { Star } from 'miniprogram-icons/icons/star';
 export { House, Star };
 `,
         )
 
-        const houseAlias = `--alias:lucide-react-taro/icons/house=${path.join(PROJECT_ROOT, 'dist/esm/icons/house.js')}`
-        const starAlias = `--alias:lucide-react-taro/icons/star=${path.join(PROJECT_ROOT, 'dist/esm/icons/star.js')}`
-        const barrelAlias = `--alias:lucide-react-taro=${path.join(PROJECT_ROOT, 'dist/esm/index.js')}`
+        const houseAlias = `--alias:miniprogram-icons/icons/house=${path.join(PROJECT_ROOT, 'dist/esm/icons/house.js')}`
+        const starAlias = `--alias:miniprogram-icons/icons/star=${path.join(PROJECT_ROOT, 'dist/esm/icons/star.js')}`
+        const barrelAlias = `--alias:miniprogram-icons=${path.join(PROJECT_ROOT, 'dist/esm/index.js')}`
 
         execSync(
             `npx esbuild "${deepEntryPath}" --bundle --outfile="${deepOutPath}" ` +

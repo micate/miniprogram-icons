@@ -1,5 +1,5 @@
 {
-  "name": "lucide-react-taro",
+  "name": "miniprogram-icons",
   "version": "1.5.2",
   "description": "Lucide icon components for Taro with dynamic color support, tree shaking, filled icons, and WeChat miniprogram compatibility",
   "main": "dist/cjs/index.js",
@@ -22,9 +22,9 @@
     "dist"
   ],
   "scripts": {
-    "fetch-icons": "lucide-react-taro-generate fetch-icons --package-dir .",
-    "generate": "lucide-react-taro-generate generate-icons --package-dir .",
-    "build:bundle": "lucide-react-taro-generate build-lib --package-dir .",
+    "fetch-icons": "miniprogram-icons-generate fetch-icons --package-dir .",
+    "generate": "miniprogram-icons-generate generate-icons --package-dir .",
+    "build:bundle": "miniprogram-icons-generate build-lib --package-dir .",
     "build": "npm run fetch-icons && npm run generate && npm run build:bundle",
     "clean": "rm -rf dist src/icons src/index.ts e2e",
     "prepublishOnly": "npm run build",
@@ -48,12 +48,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/louisyoungx/lucide-react-taro.git",
-    "directory": "packages/lucide-react-taro"
+    "url": "git+https://github.com/louisyoungx/miniprogram-icons.git",
+    "directory": "packages/miniprogram-icons"
   },
   "homepage": "https://lucide.rocke.top",
   "bugs": {
-    "url": "https://github.com/louisyoungx/lucide-react-taro/issues"
+    "url": "https://github.com/louisyoungx/miniprogram-icons/issues"
   },
   "peerDependencies": {
     "@tarojs/components": ">=3.0.0",
@@ -81,7 +81,7 @@
     "tsx": "^4.0.0",
     "typescript": "5.9.3",
     "vitest": "4.1.0",
-    "@lucide-react-taro/generate": "workspace:*"
+    "@miniprogram-icons/generate": "workspace:*"
   },
   "dependencies": {}
 }

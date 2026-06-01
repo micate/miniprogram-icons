@@ -80,7 +80,7 @@ describe('StrictProps Type E2E', () => {
                     name: 'strict-props-e2e-test',
                     private: true,
                     dependencies: {
-                        'lucide-react-taro': 'latest',
+                        'miniprogram-icons': 'latest',
                         react: '>=18.0.0',
                         '@tarojs/components': '>=4.0.0',
                     },
@@ -104,7 +104,7 @@ describe('StrictProps Type E2E', () => {
         writeSrcFile(
             'test-default.tsx',
             `
-import { House, Settings, User } from 'lucide-react-taro';
+import { House, Settings, User } from 'miniprogram-icons';
 
 const a = <House />;
 const b = <Settings size={32} />;
@@ -124,7 +124,7 @@ const c = <User color="red" />;
             'strict-augment.d.ts',
             `
 export {};
-declare module 'lucide-react-taro' {
+declare module 'miniprogram-icons' {
   interface LucideTaroConfig {
     strictProps: true;
   }
@@ -135,7 +135,7 @@ declare module 'lucide-react-taro' {
         writeSrcFile(
             'test-strict-missing.tsx',
             `
-import { House, Settings } from 'lucide-react-taro';
+import { House, Settings } from 'miniprogram-icons';
 
 const a = <House />;
 const b = <Settings />;
@@ -159,7 +159,7 @@ const b = <Settings />;
             'strict-augment.d.ts',
             `
 export {};
-declare module 'lucide-react-taro' {
+declare module 'miniprogram-icons' {
   interface LucideTaroConfig {
     strictProps: true;
   }
@@ -170,7 +170,7 @@ declare module 'lucide-react-taro' {
         writeSrcFile(
             'test-strict-ok.tsx',
             `
-import { House, Settings, User } from 'lucide-react-taro';
+import { House, Settings, User } from 'miniprogram-icons';
 
 const a = <House color="#333" size={24} />;
 const b = <Settings color="red" size={32} />;
@@ -193,7 +193,7 @@ const c = <User color="#1890ff" size="2rem" />;
             'strict-augment.d.ts',
             `
 export {};
-declare module 'lucide-react-taro' {
+declare module 'miniprogram-icons' {
   interface LucideTaroConfig {
     strictProps: true;
   }
@@ -204,7 +204,7 @@ declare module 'lucide-react-taro' {
         writeSrcFile(
             'test-strict-no-size.tsx',
             `
-import { House } from 'lucide-react-taro';
+import { House } from 'miniprogram-icons';
 
 const el = <House color="red" />;
 `,
@@ -226,7 +226,7 @@ const el = <House color="red" />;
             'strict-augment.d.ts',
             `
 export {};
-declare module 'lucide-react-taro' {
+declare module 'miniprogram-icons' {
   interface LucideTaroConfig {
     strictProps: true;
   }
@@ -237,7 +237,7 @@ declare module 'lucide-react-taro' {
         writeSrcFile(
             'test-strict-no-color.tsx',
             `
-import { Settings } from 'lucide-react-taro';
+import { Settings } from 'miniprogram-icons';
 
 const el = <Settings size={24} />;
 `,
@@ -259,7 +259,7 @@ const el = <Settings size={24} />;
             'strict-augment.d.ts',
             `
 export {};
-declare module 'lucide-react-taro' {
+declare module 'miniprogram-icons' {
   interface LucideTaroConfig {
     strictProps: true;
   }
@@ -271,7 +271,7 @@ declare module 'lucide-react-taro' {
         writeSrcFile(
             'test-realistic-ok.tsx',
             `
-import { House, Settings, User, Heart, Camera, Zap } from 'lucide-react-taro';
+import { House, Settings, User, Heart, Camera, Zap } from 'miniprogram-icons';
 
 function TabBar() {
   const active: string = 'home';
@@ -301,7 +301,7 @@ function IconGallery() {
         writeSrcFile(
             'test-realistic-fail.tsx',
             `
-import { House, Settings, Heart, Camera } from 'lucide-react-taro';
+import { House, Settings, Heart, Camera } from 'miniprogram-icons';
 
 // correct
 const a = <House color="#333" size={24} />;
@@ -343,7 +343,7 @@ const e = <House />;
             'strict-augment.d.ts',
             `
 export {};
-declare module 'lucide-react-taro' {
+declare module 'miniprogram-icons' {
   interface LucideTaroConfig {
     strictProps: true;
   }
@@ -354,7 +354,7 @@ declare module 'lucide-react-taro' {
         writeSrcFile(
             'test-inherit-ok.tsx',
             `
-import { House, Settings } from 'lucide-react-taro';
+import { House, Settings } from 'miniprogram-icons';
 
 // inherit defers to LucideTaroProvider defaults
 const a = <House color="inherit" size="inherit" />;

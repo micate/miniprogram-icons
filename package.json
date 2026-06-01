@@ -14,7 +14,7 @@
     "build": "pnpm run build:lib && pnpm run build:cli && pnpm run build:docs",
     "bump": "node scripts/version-packages.mjs",
     "clean": "pnpm --filter miniprogram-icons clean && pnpm --filter miniprogram-tabbar clean && pnpm --filter miniprogram-icons-find clean && pnpm --filter miniprogram-icons-show clean && rm -rf docs/dist .cache",
-    "release": "node scripts/publish.mjs --registry=https://registry.npmjs.org/",
+    "release": "node scripts/publish.mjs",
     "test": "pnpm --filter miniprogram-icons test && pnpm --filter miniprogram-tabbar test",
     "test:watch": "pnpm --filter miniprogram-icons test:watch",
     "test:coverage": "pnpm --filter miniprogram-icons test:coverage && pnpm --filter miniprogram-tabbar test:coverage",

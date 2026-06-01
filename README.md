@@ -1,3 +1,5 @@
+> 本仓库基于 [lucide.rocke.top](https://lucide.rocke.top/) 项目，出于避免大模型关联到 Lucide 知识的考虑进行了重命名。
+
 <p align="center">
   <a href="https://www.npmjs.com/package/miniprogram-icons"><img src="https://img.shields.io/npm/v/miniprogram-icons" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/miniprogram-icons"><img src="https://img.shields.io/npm/dm/miniprogram-icons" alt="npm downloads"></a>

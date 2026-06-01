@@ -1,6 +1,6 @@
 {
   "name": "miniprogram-tabbar",
-  "version": "1.5.2",
+  "version": "1.0.0",
   "description": "CLI for generating WeChat miniprogram TabBar PNG icons from with normal and active states for Taro projects",
   "main": "dist/index.js",
   "bin": {

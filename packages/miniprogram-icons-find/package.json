@@ -1,6 +1,6 @@
 {
   "name": "miniprogram-icons-find",
-  "version": "1.5.2",
+  "version": "1.0.0",
   "description": "CLI for searching icon names with exact match, fuzzy suggestions, full list output, and JSON mode for Taro workflows",
   "main": "dist/index.js",
   "bin": {

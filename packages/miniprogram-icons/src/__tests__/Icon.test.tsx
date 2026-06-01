@@ -2,7 +2,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import { createIcon } from '../create-icon';
-import { LucideTaroProvider } from '../context';
+import { MiniProgramIconsProvider } from '../context';
 
 vi.mock('@tarojs/components', () => ({
   Image: React.forwardRef(({ src, className, style, ...props }: any, ref) => (
@@ -26,7 +26,7 @@ describe('createIcon', () => {
 
   it('should use default displayName when not provided', () => {
     const TestIcon = createIcon(mockSvgTemplate);
-    expect(TestIcon.displayName).toBe('LucideIcon');
+    expect(TestIcon.displayName).toBe('MiniProgramIcon');
   });
 });
 
@@ -191,14 +191,14 @@ describe('Filled rendering', () => {
   });
 });
 
-describe('LucideTaroProvider', () => {
+describe('MiniProgramIconsProvider', () => {
   const TestIcon = createIcon(mockSvgTemplate, 'ProviderTestIcon');
 
   it('should use defaultColor from provider', () => {
     const { getByTestId } = render(
-      <LucideTaroProvider defaultColor="#00ff00">
+      <MiniProgramIconsProvider defaultColor="#00ff00">
         <TestIcon />
-      </LucideTaroProvider>
+      </MiniProgramIconsProvider>
     );
     const src = getByTestId('icon-image').getAttribute('src');
     expect(src).toContain(encodeURIComponent('stroke="#00ff00"'));
@@ -207,9 +207,9 @@ describe('LucideTaroProvider', () => {
 
   it('should use defaultSize from provider', () => {
     const { getByTestId } = render(
-      <LucideTaroProvider defaultSize={32}>
+      <MiniProgramIconsProvider defaultSize={32}>
         <TestIcon />
-      </LucideTaroProvider>
+      </MiniProgramIconsProvider>
     );
     const img = getByTestId('icon-image');
     expect(img.style.width).toBe('32px');
@@ -218,9 +218,9 @@ describe('LucideTaroProvider', () => {
 
   it('should allow color prop to override defaultColor', () => {
     const { getByTestId } = render(
-      <LucideTaroProvider defaultColor="#00ff00">
+      <MiniProgramIconsProvider defaultColor="#00ff00">
         <TestIcon color="#ff0000" />
-      </LucideTaroProvider>
+      </MiniProgramIconsProvider>
     );
     const src = getByTestId('icon-image').getAttribute('src');
     expect(src).toContain(encodeURIComponent('stroke="#ff0000"'));
@@ -229,9 +229,9 @@ describe('LucideTaroProvider', () => {
 
   it('should allow size prop to override defaultSize', () => {
     const { getByTestId } = render(
-      <LucideTaroProvider defaultSize={32}>
+      <MiniProgramIconsProvider defaultSize={32}>
         <TestIcon size={48} />
-      </LucideTaroProvider>
+      </MiniProgramIconsProvider>
     );
     const img = getByTestId('icon-image');
     expect(img.style.width).toBe('48px');
@@ -252,9 +252,9 @@ describe('Inherit value', () => {
 
   it('should use provider defaultColor when color="inherit"', () => {
     const { getByTestId } = render(
-      <LucideTaroProvider defaultColor="#00ff00">
+      <MiniProgramIconsProvider defaultColor="#00ff00">
         <TestIcon color="inherit" />
-      </LucideTaroProvider>
+      </MiniProgramIconsProvider>
     );
     const src = getByTestId('icon-image').getAttribute('src');
     expect(src).toContain(encodeURIComponent('stroke="#00ff00"'));
@@ -263,9 +263,9 @@ describe('Inherit value', () => {
 
   it('should use provider defaultSize when size="inherit"', () => {
     const { getByTestId } = render(
-      <LucideTaroProvider defaultSize={32}>
+      <MiniProgramIconsProvider defaultSize={32}>
         <TestIcon size="inherit" />
-      </LucideTaroProvider>
+      </MiniProgramIconsProvider>
     );
     const img = getByTestId('icon-image');
     expect(img.style.width).toBe('32px');
@@ -287,9 +287,9 @@ describe('Inherit value', () => {
 
   it('should use both provider defaults with color="inherit" size="inherit"', () => {
     const { getByTestId } = render(
-      <LucideTaroProvider defaultColor="#ff3e98" defaultSize={48}>
+      <MiniProgramIconsProvider defaultColor="#ff3e98" defaultSize={48}>
         <TestIcon color="inherit" size="inherit" />
-      </LucideTaroProvider>
+      </MiniProgramIconsProvider>
     );
     const img = getByTestId('icon-image');
     const src = img.getAttribute('src');

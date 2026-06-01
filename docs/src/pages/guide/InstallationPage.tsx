@@ -56,7 +56,7 @@ export default function InstallationPage() {
               更稳妥的做法，是直接传
               <code className="mx-1 rounded bg-muted px-1.5 py-0.5 text-xs">color</code>
               ，或者用
-              <code className="mx-1 rounded bg-muted px-1.5 py-0.5 text-xs">LucideTaroProvider</code>
+              <code className="mx-1 rounded bg-muted px-1.5 py-0.5 text-xs">MiniProgramIconsProvider</code>
               统一设置默认颜色和尺寸。
             </p>
           </div>

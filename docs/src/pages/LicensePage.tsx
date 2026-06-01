@@ -10,17 +10,12 @@ export default function LicensePage() {
 
       <div className="prose prose-slate dark:prose-invert max-w-none">
         <p>
-          本项目 (miniprogram-icons) 是对 Lucide 图标库的 Taro 框架封装。
-          下方的开源协议复制自原始的 Lucide 项目 (<a href="https://github.com/lucide-icons/lucide" target="_blank" rel="noreferrer" className="text-primary hover:underline">https://github.com/lucide-icons/lucide</a>)。
-          所有版权归 Lucide 及其贡献者所有。
+          本项目 (miniprogram-icons) 是对图标库的 Taro 框架封装。
         </p>
 
         <hr className="my-8 border-border" />
 
         <h3 className="text-2xl font-bold mt-8 mb-4">ISC License</h3>
-        <p className="mb-4">
-          Copyright (c) for portions of Lucide are held by Cole Bemis 2013-2026 as part of Feather (MIT). All other copyright (c) for Lucide are held by Lucide Contributors 2026.
-        </p>
         <p className="mb-4">
           Permission to use, copy, modify, and/or distribute this software for any
           purpose with or without fee is hereby granted, provided that the above

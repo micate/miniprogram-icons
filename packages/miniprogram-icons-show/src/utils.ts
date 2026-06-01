@@ -162,7 +162,7 @@ export async function downloadIcon(iconName: string): Promise<DownloadResult> {
             if (response.status === 404) {
                 return {
                     success: false,
-                    error: `Icon "${iconName}" (${kebabName}) not found in Lucide library`,
+                    error: `Icon "${iconName}" (${kebabName}) not found in library`,
                     errorCode: 'ICON_NOT_FOUND',
                 }
             }

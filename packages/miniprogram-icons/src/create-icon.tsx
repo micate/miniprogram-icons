@@ -1,6 +1,6 @@
 import { Image } from '@tarojs/components';
 import React, { useContext, useMemo } from 'react';
-import { LucideTaroContext } from './context';
+import { MiniProgramIconsContext } from './context';
 import type { IconProps } from './types';
 
 function svgToDataUrl(svg: string): string {
@@ -20,7 +20,7 @@ export function createIcon(svgTemplate: string, iconName?: string) {
     style,
     ...props
   }: IconProps) => {
-    const { defaultColor, defaultSize } = useContext(LucideTaroContext);
+    const { defaultColor, defaultSize } = useContext(MiniProgramIconsContext);
     const size = sizeProp === 'inherit' ? (defaultSize ?? 24) : (sizeProp ?? defaultSize ?? 24);
     const color = (colorProp && colorProp !== 'inherit') ? colorProp : defaultColor;
 
@@ -69,7 +69,7 @@ export function createIcon(svgTemplate: string, iconName?: string) {
     );
   };
 
-  IconComponent.displayName = iconName || 'LucideIcon';
+  IconComponent.displayName = iconName || 'MiniProgramIcon';
 
   return IconComponent;
 }

@@ -71,22 +71,22 @@ import { House, Settings, User, Camera, Zap } from 'miniprogram-icons';
 <User className="my-icon" style={{ marginRight: 8 }} />
 ```
 
-### LucideTaroProvider（全局默认配置）
+### MiniProgramIconsProvider（全局默认配置）
 
-通过 `LucideTaroProvider` 为所有子组件设置默认颜色和尺寸，避免在每个图标上重复传递 props：
+通过 `MiniProgramIconsProvider` 为所有子组件设置默认颜色和尺寸，避免在每个图标上重复传递 props：
 
 ```tsx
-import { LucideTaroProvider, House, Settings, Camera } from 'miniprogram-icons';
+import { MiniProgramIconsProvider, House, Settings, Camera } from 'miniprogram-icons';
 
 // 所有子组件默认使用 #666 颜色和 20px 尺寸
-<LucideTaroProvider defaultColor="#666" defaultSize={20}>
+<MiniProgramIconsProvider defaultColor="#666" defaultSize={20}>
   <House />              {/* 使用 #666, 20px */}
   <Settings color="red" /> {/* color prop 优先，使用 red */}
   <Camera size={32} />    {/* size prop 优先，使用 32px */}
-</LucideTaroProvider>
+</MiniProgramIconsProvider>
 ```
 
-> **注意**：由于小程序端 SVG 是通过 Data URL 渲染的，图标无法从 CSS 继承父元素的文字颜色（`currentColor` 会回退为黑色）。建议通过 `LucideTaroProvider` 或 `color` prop 显式指定颜色。
+> **注意**：由于小程序端 SVG 是通过 Data URL 渲染的，图标无法从 CSS 继承父元素的文字颜色（`currentColor` 会回退为黑色）。建议通过 `MiniProgramIconsProvider` 或 `color` prop 显式指定颜色。
 
 ## API
 
@@ -110,7 +110,7 @@ import { LucideTaroProvider, House, Settings, Camera } from 'miniprogram-icons';
 // 在你的项目类型声明文件（如 global.d.ts 或 taro-env.d.ts）中添加：
 export {};
 declare module 'miniprogram-icons' {
-  interface LucideTaroConfig {
+  interface MiniProgramIconsConfig {
     strictProps: true;
   }
 }
@@ -120,20 +120,20 @@ declare module 'miniprogram-icons' {
 
 配置后，如果使用图标时不传入 `color` 或 `size`，TypeScript 将会报错。
 
-#### 配合 LucideTaroProvider 使用 `"inherit"`
+#### 配合 MiniProgramIconsProvider 使用 `"inherit"`
 
-在 `strictProps` 模式下，如果已通过 `LucideTaroProvider` 设置了默认值，可以传入 `"inherit"` 来使用 Provider 的默认颜色和尺寸，而不必在每个图标上重复传值：
+在 `strictProps` 模式下，如果已通过 `MiniProgramIconsProvider` 设置了默认值，可以传入 `"inherit"` 来使用 Provider 的默认颜色和尺寸，而不必在每个图标上重复传值：
 
 ```tsx
-import { LucideTaroProvider, House, Settings } from 'miniprogram-icons';
+import { MiniProgramIconsProvider, House, Settings } from 'miniprogram-icons';
 
-<LucideTaroProvider defaultColor="#666" defaultSize={20}>
+<MiniProgramIconsProvider defaultColor="#666" defaultSize={20}>
   {/* inherit 表示使用 Provider 的默认值 */}
   <House color="inherit" size="inherit" />
 
   {/* 也可以只 inherit 其中一个，另一个显式指定 */}
   <Settings color="inherit" size={32} />
-</LucideTaroProvider>
+</MiniProgramIconsProvider>
 ```
 
 ## CLI 工具

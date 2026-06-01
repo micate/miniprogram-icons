@@ -1,14 +1,14 @@
 import React, { createContext, useMemo } from 'react';
 
-export interface LucideTaroProviderProps {
+export interface MiniProgramIconsProviderProps {
   defaultColor?: string;
   defaultSize?: number | string;
   children: React.ReactNode;
 }
 
-export const LucideTaroContext = createContext<{ defaultColor?: string; defaultSize?: number | string }>({});
+export const MiniProgramIconsContext = createContext<{ defaultColor?: string; defaultSize?: number | string }>({});
 
-export const LucideTaroProvider: React.FC<LucideTaroProviderProps> = ({ defaultColor, defaultSize, children }) => {
+export const MiniProgramIconsProvider: React.FC<MiniProgramIconsProviderProps> = ({ defaultColor, defaultSize, children }) => {
   const value = useMemo(() => ({ defaultColor, defaultSize }), [defaultColor, defaultSize]);
-  return <LucideTaroContext.Provider value={value}>{children}</LucideTaroContext.Provider>;
+  return <MiniProgramIconsContext.Provider value={value}>{children}</MiniProgramIconsContext.Provider>;
 };

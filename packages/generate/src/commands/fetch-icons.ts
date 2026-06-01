@@ -11,7 +11,7 @@ export async function fetchIcons(packageDir: string) {
   const iconsSourceDir = path.join(cacheDir, 'icons')
   const gitIndexLock = path.join(cacheDir, '.git', 'index.lock')
 
-  console.log('Fetching latest Lucide icons...')
+  console.log('Fetching latest icons...')
 
   if (fs.existsSync(cacheDir)) {
     console.log('Cache directory exists, pulling latest changes...')
@@ -39,7 +39,7 @@ export async function fetchIcons(packageDir: string) {
 }
 
 function cloneRepo(cacheDir: string) {
-  console.log('Cloning Lucide repository (sparse checkout)...')
+  console.log('Cloning repository (sparse checkout)...')
 
   ensureDir(cacheDir)
   execSync('git init', { cwd: cacheDir, stdio: 'inherit' })

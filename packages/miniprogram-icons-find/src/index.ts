@@ -7,7 +7,7 @@ const program = new Command()
 
 program
     .name('miniprogram-icons-find')
-    .description('Find Lucide icon names with exact match, fuzzy suggestions, list output, and JSON mode')
+    .description('Find icon names with exact match, fuzzy suggestions, list output, and JSON mode')
     .argument('[queries...]', 'Search queries')
     .option('-e, --exact', 'Exact match only')
     .option('-l, --list', 'List all icons')

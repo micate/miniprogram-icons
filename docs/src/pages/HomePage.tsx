@@ -13,11 +13,11 @@ export default function HomePage() {
           <div className="flex items-center gap-4">
             <img src="/assets/logo.svg" alt="miniprogram-icons logo" className="h-16 w-16" />
             <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">
-              Lucide React Taro
+              MiniProgram Icons
             </h1>
           </div>
           <p className="text-xl text-muted-foreground max-w-[700px]">
-            为 Taro 应用打造的精美、一致的图标库。基于 Lucide 构建。
+            为 Taro 应用打造的精美、一致的图标库。
             支持 Tree-shaking、动态颜色以及描边自定义。
           </p>
           <div className="flex flex-wrap gap-4 mt-4">
@@ -62,9 +62,6 @@ export default function HomePage() {
             <Package className="h-6 w-6" />
           </div>
           <h3 className="text-xl font-bold">简单易用</h3>
-          <p className="text-muted-foreground">
-            拥有和 lucide-react 完全一致的简单 API。直接导入即可使用。
-          </p>
         </div>
         <div className="flex flex-col gap-2">
           <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">

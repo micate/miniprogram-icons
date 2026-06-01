@@ -1,10 +1,10 @@
 import { useState, useMemo, useRef, memo, useTransition, useEffect } from "react";
 import { Link } from "react-router-dom";
-import * as LucideIcons from "miniprogram-icons";
+import * as MiniProgramIcons from "miniprogram-icons";
 import { Search } from "lucide-react";
 
 const IconCard = memo(({ name }: { name: string }) => {
-  const Icon = (LucideIcons as any)[name];
+  const Icon = (MiniProgramIcons as any)[name];
   return (
     <Link
       to={`/icons/${name}`}
@@ -28,9 +28,9 @@ export default function IconsPage() {
   const targetRef = useRef<HTMLDivElement>(null);
 
   const iconList = useMemo(() => {
-    return Object.keys(LucideIcons).filter((key) => {
+    return Object.keys(MiniProgramIcons).filter((key) => {
       // Filter out internal helpers and types, keep only PascalCase icon names
-      return /^[A-Z]/.test(key) && typeof (LucideIcons as any)[key] === "function";
+      return /^[A-Z]/.test(key) && typeof (MiniProgramIcons as any)[key] === "function";
     });
   }, []);
 

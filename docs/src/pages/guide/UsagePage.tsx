@@ -66,22 +66,22 @@ function MyComponent() {
       </section>
 
       <section className="flex flex-col gap-6">
-        <h2 className="text-2xl font-bold tracking-tight border-b pb-2">LucideTaroProvider（全局默认配置）</h2>
+        <h2 className="text-2xl font-bold tracking-tight border-b pb-2">MiniProgramIconsProvider（全局默认配置）</h2>
         <p className="text-foreground/90">
-          由于小程序端 SVG 通过 Data URL 渲染，图标无法从 CSS 继承父元素的文字颜色（<code className="text-sm bg-muted px-1.5 py-0.5 rounded">currentColor</code> 会回退为黑色）。使用 <code className="text-sm bg-muted px-1.5 py-0.5 rounded">LucideTaroProvider</code> 可以为所有子组件设置默认颜色和尺寸，避免在每个图标上重复传递 props。
+          由于小程序端 SVG 通过 Data URL 渲染，图标无法从 CSS 继承父元素的文字颜色（<code className="text-sm bg-muted px-1.5 py-0.5 rounded">currentColor</code> 会回退为黑色）。使用 <code className="text-sm bg-muted px-1.5 py-0.5 rounded">MiniProgramIconsProvider</code> 可以为所有子组件设置默认颜色和尺寸，避免在每个图标上重复传递 props。
         </p>
         <CodeBlock
           language="tsx"
-          code={`import { LucideTaroProvider, House, Settings, Camera } from 'miniprogram-icons';
+          code={`import { MiniProgramIconsProvider, House, Settings, Camera } from 'miniprogram-icons';
 
 function App() {
   return (
     // 所有子组件默认使用 #666 颜色和 20px 尺寸
-    <LucideTaroProvider defaultColor="#666" defaultSize={20}>
+    <MiniProgramIconsProvider defaultColor="#666" defaultSize={20}>
       <House />              {/* 使用 #666, 20px */}
       <Settings color="red" /> {/* color prop 优先，使用 red */}
       <Camera size={32} />    {/* size prop 优先，使用 32px */}
-    </LucideTaroProvider>
+    </MiniProgramIconsProvider>
   );
 }`}
         />
@@ -109,7 +109,7 @@ function App() {
           </table>
         </div>
         <div className="rounded-lg border border-yellow-500/30 bg-yellow-500/5 p-4 text-sm text-foreground/80">
-          <strong>优先级：</strong><code className="bg-muted px-1.5 py-0.5 rounded">color</code> prop &gt; <code className="bg-muted px-1.5 py-0.5 rounded">LucideTaroProvider defaultColor</code> &gt; 回退为黑色（#000）
+          <strong>优先级：</strong><code className="bg-muted px-1.5 py-0.5 rounded">color</code> prop &gt; <code className="bg-muted px-1.5 py-0.5 rounded">MiniProgramIconsProvider defaultColor</code> &gt; 回退为黑色（#000）
         </div>
       </section>
 

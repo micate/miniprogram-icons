@@ -1,9 +1,9 @@
 import React, { memo } from "react";
 import { useNavigate } from "react-router-dom";
-import * as LucideIcons from "miniprogram-icons";
+import * as MiniProgramIcons from "miniprogram-icons";
 
 // Filter out non-icon exports (like createIcon)
-const RAW_ICONS = Object.entries(LucideIcons)
+const RAW_ICONS = Object.entries(MiniProgramIcons)
   .filter(
     ([name, icon]) =>
       (typeof icon === "function" || typeof icon === "object") &&

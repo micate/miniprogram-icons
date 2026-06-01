@@ -125,7 +125,7 @@ const c = <User color="red" />;
             `
 export {};
 declare module 'miniprogram-icons' {
-  interface LucideTaroConfig {
+  interface MiniProgramIconsConfig {
     strictProps: true;
   }
 }
@@ -160,7 +160,7 @@ const b = <Settings />;
             `
 export {};
 declare module 'miniprogram-icons' {
-  interface LucideTaroConfig {
+  interface MiniProgramIconsConfig {
     strictProps: true;
   }
 }
@@ -194,7 +194,7 @@ const c = <User color="#1890ff" size="2rem" />;
             `
 export {};
 declare module 'miniprogram-icons' {
-  interface LucideTaroConfig {
+  interface MiniProgramIconsConfig {
     strictProps: true;
   }
 }
@@ -227,7 +227,7 @@ const el = <House color="red" />;
             `
 export {};
 declare module 'miniprogram-icons' {
-  interface LucideTaroConfig {
+  interface MiniProgramIconsConfig {
     strictProps: true;
   }
 }
@@ -260,7 +260,7 @@ const el = <Settings size={24} />;
             `
 export {};
 declare module 'miniprogram-icons' {
-  interface LucideTaroConfig {
+  interface MiniProgramIconsConfig {
     strictProps: true;
   }
 }
@@ -344,7 +344,7 @@ const e = <House />;
             `
 export {};
 declare module 'miniprogram-icons' {
-  interface LucideTaroConfig {
+  interface MiniProgramIconsConfig {
     strictProps: true;
   }
 }
@@ -356,7 +356,7 @@ declare module 'miniprogram-icons' {
             `
 import { House, Settings } from 'miniprogram-icons';
 
-// inherit defers to LucideTaroProvider defaults
+// inherit defers to MiniProgramIconsProvider defaults
 const a = <House color="inherit" size="inherit" />;
 const b = <Settings color="inherit" size={24} />;
 const c = <House color="#333" size="inherit" />;

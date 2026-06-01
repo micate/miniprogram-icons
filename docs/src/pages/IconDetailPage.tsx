@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import * as LucideIcons from "miniprogram-icons";
+import * as MiniProgramIcons from "miniprogram-icons";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { CodeBlock } from "@/components/CodeBlock";
@@ -9,7 +9,7 @@ import { ArrowLeft } from "lucide-react";
 export default function IconDetailPage() {
   const { iconName } = useParams();
   // @ts-ignore
-  const Icon = iconName ? LucideIcons[iconName] : null;
+  const Icon = iconName ? MiniProgramIcons[iconName] : null;
 
   const [size, setSize] = useState(48);
   const [color, setColor] = useState("#000000");

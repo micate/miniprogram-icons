@@ -76,7 +76,7 @@ export default function PropsPage() {
           <pre className="text-sm overflow-x-auto"><code>{`// 在你的项目类型声明文件（如 global.d.ts 或 taro-env.d.ts）中添加：
 export {};
 declare module 'miniprogram-icons' {
-  interface LucideTaroConfig {
+  interface MiniProgramIconsConfig {
     strictProps: true;
   }
 }`}</code></pre>

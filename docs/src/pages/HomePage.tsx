@@ -11,7 +11,7 @@ export default function HomePage() {
       <section className="grid lg:grid-cols-2 gap-8 items-center min-h-[300px]">
         <div className="flex flex-col items-start gap-6 py-8">
           <div className="flex items-center gap-4">
-            <img src="/assets/logo.svg" alt="lucide-react-taro logo" className="h-16 w-16" />
+            <img src="/assets/logo.svg" alt="miniprogram-icons logo" className="h-16 w-16" />
             <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">
               Lucide React Taro
             </h1>
@@ -32,7 +32,7 @@ export default function HomePage() {
               </Button>
             </Link>
             <a
-              href="https://github.com/louisyoungx/lucide-react-taro"
+              href="https://github.com/louisyoungx/miniprogram-icons"
               target="_blank"
               rel="noreferrer"
             >
@@ -111,7 +111,7 @@ export default function HomePage() {
           </div>
           <CodeBlock
             language="tsx"
-            code={`import { Heart, Settings, Zap } from 'lucide-react-taro';
+            code={`import { Heart, Settings, Zap } from 'miniprogram-icons';
 
 // 基础用法
 <Settings size={32} />
@@ -133,7 +133,7 @@ export default function HomePage() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <CommandTabs
             className="order-2 lg:order-1"
-            packageName="taro-lucide-tabbar"
+            packageName="miniprogram-tabbar"
             commands={[
               '--help',
               'House -c "#999999"',
@@ -184,11 +184,11 @@ export default function HomePage() {
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
             正在使用 Trae 或 Cursor 等 AI 编程助手？只需安装我们的技能 (Skill)，
-            即可让 AI 瞬间掌握如何在你的项目中使用 lucide-react-taro。
+            即可让 AI 瞬间掌握如何在你的项目中使用 miniprogram-icons。
           </p>
           <CodeBlock
             language="bash"
-            code="npx skills add louisyoungx/lucide-react-taro"
+            code="npx skills add louisyoungx/miniprogram-icons"
           />
         </div>
       </section>

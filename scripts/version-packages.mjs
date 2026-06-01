@@ -5,10 +5,10 @@ const rootDir = process.cwd()
 const targetFiles = [
   'package.json',
   'packages/generate/package.json',
-  'packages/lucide-react-taro/package.json',
-  'packages/taro-lucide-tabbar/package.json',
-  'packages/taro-lucide-find/package.json',
-  'packages/taro-lucide-show/package.json',
+  'packages/miniprogram-icons/package.json',
+  'packages/miniprogram-tabbar/package.json',
+  'packages/miniprogram-icons-find/package.json',
+  'packages/miniprogram-icons-show/package.json',
 ]
 
 function fail(message) {

@@ -14,10 +14,10 @@ export default function CliPage() {
           <h3 className="text-2xl font-bold mb-4">生成 TabBar 图标</h3>
           <p className="mb-4 text-foreground/90">
             微信小程序的 TabBar 不支持 base64 或 SVG 图片，只能使用本地 PNG 文件。
-            使用独立发布的 <code>taro-lucide-tabbar</code> 即可一键生成这些 PNG 图标。
+            使用独立发布的 <code>miniprogram-tabbar</code> 即可一键生成这些 PNG 图标。
           </p>
           <CommandTabs
-            packageName="taro-lucide-tabbar"
+            packageName="miniprogram-tabbar"
             commands={[
               '--help',
               'House -c "#999999"',
@@ -31,10 +31,10 @@ export default function CliPage() {
         <div>
           <h3 className="text-2xl font-bold mb-4">在终端预览图标</h3>
           <p className="mb-4 text-foreground/90">
-            使用独立发布的 <code>taro-lucide-show</code> 在终端中直接预览图标。
+            使用独立发布的 <code>miniprogram-icons-show</code> 在终端中直接预览图标。
           </p>
           <CommandTabs
-            packageName="taro-lucide-show"
+            packageName="miniprogram-icons-show"
             commands={[
               '--help',
               'arrow-up',
@@ -46,10 +46,10 @@ export default function CliPage() {
         <div>
           <h3 className="text-2xl font-bold mb-4">查找和验证图标</h3>
           <p className="mb-4 text-foreground/90">
-            使用独立发布的 <code>taro-lucide-find</code> 在命令行中直接查找图标，或通过代码批量验证。
+            使用独立发布的 <code>miniprogram-icons-find</code> 在命令行中直接查找图标，或通过代码批量验证。
           </p>
           <CommandTabs
-            packageName="taro-lucide-find"
+            packageName="miniprogram-icons-find"
             commands={[
               '--help',
               'arrow',

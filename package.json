@@ -1,23 +1,23 @@
 {
-  "name": "@lucide-react-taro/monorepo",
+  "name": "@miniprogram-icons/monorepo",
   "version": "1.5.2",
   "private": true,
-  "description": "Workspace root for lucide-react-taro and its CLI packages",
+  "description": "Workspace root for miniprogram-icons and its CLI packages",
   "workspaces": [
     "docs",
     "packages/*"
   ],
   "scripts": {
-    "build:lib": "pnpm --filter lucide-react-taro build",
-    "build:cli": "pnpm --filter taro-lucide-tabbar build && pnpm --filter taro-lucide-find build && pnpm --filter taro-lucide-show build",
+    "build:lib": "pnpm --filter miniprogram-icons build",
+    "build:cli": "pnpm --filter miniprogram-tabbar build && pnpm --filter miniprogram-icons-find build && pnpm --filter miniprogram-icons-show build",
     "build:docs": "pnpm run build:lib && pnpm -C docs build",
     "build": "pnpm run build:lib && pnpm run build:cli && pnpm run build:docs",
     "bump": "node scripts/version-packages.mjs",
-    "clean": "pnpm --filter lucide-react-taro clean && pnpm --filter taro-lucide-tabbar clean && pnpm --filter taro-lucide-find clean && pnpm --filter taro-lucide-show clean && rm -rf docs/dist .lucide-cache",
+    "clean": "pnpm --filter miniprogram-icons clean && pnpm --filter miniprogram-tabbar clean && pnpm --filter miniprogram-icons-find clean && pnpm --filter miniprogram-icons-show clean && rm -rf docs/dist .lucide-cache",
     "release": "node scripts/publish.mjs",
-    "test": "pnpm --filter lucide-react-taro test && pnpm --filter taro-lucide-tabbar test",
-    "test:watch": "pnpm --filter lucide-react-taro test:watch",
-    "test:coverage": "pnpm --filter lucide-react-taro test:coverage && pnpm --filter taro-lucide-tabbar test:coverage",
+    "test": "pnpm --filter miniprogram-icons test && pnpm --filter miniprogram-tabbar test",
+    "test:watch": "pnpm --filter miniprogram-icons test:watch",
+    "test:coverage": "pnpm --filter miniprogram-icons test:coverage && pnpm --filter miniprogram-tabbar test:coverage",
     "dev:docs": "pnpm -C docs dev"
   },
   "devDependencies": {

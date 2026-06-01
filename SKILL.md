@@ -1,11 +1,11 @@
 ---
-name: lucide-react-taro
+name: miniprogram-icons
 description: 在 Taro 微信小程序和 Web 项目中使用 Lucide 图标。当用户需要在 Taro 项目中添加图标、使用 lucide 图标库、生成 TabBar 图标时使用此技能。
 ---
 
-# lucide-react-taro
+# miniprogram-icons
 
-`lucide-react-taro` 是 Lucide 图标库的 Taro 适配版本，专为 Taro 微信小程序和 Web 平台设计。
+`miniprogram-icons` 是 Lucide 图标库的 Taro 适配版本，专为 Taro 微信小程序和 Web 平台设计。
 
 ## 渲染原理（微信小程序端）
 
@@ -19,9 +19,9 @@ description: 在 Taro 微信小程序和 Web 项目中使用 Lucide 图标。当
 ## 安装
 
 ```bash
-npm install lucide-react-taro
+npm install miniprogram-icons
 # or
-pnpm add lucide-react-taro
+pnpm add miniprogram-icons
 ```
 
 ## 基础用法
@@ -29,7 +29,7 @@ pnpm add lucide-react-taro
 ✅ 正确示例（用 `color/size/strokeWidth`，以及可选的 `style` 覆盖尺寸）
 
 ```tsx
-import { House, Settings, Camera, Zap, Heart } from 'lucide-react-taro';
+import { House, Settings, Camera, Zap, Heart } from 'miniprogram-icons';
 
 function MyComponent() {
   return (
@@ -48,7 +48,7 @@ function MyComponent() {
 ❌ 错误示例（`className` 的 `text-*` 不会改变 icon 的 `stroke/fill`；它只是 `<Image />` 的 class）
 
 ```tsx
-import { House } from 'lucide-react-taro';
+import { House } from 'miniprogram-icons';
 
 function MyComponent() {
   return (
@@ -78,8 +78,8 @@ function MyComponent() {
 支持 tree shaking，只打包使用到的图标：
 
 ```tsx
-import { House, Settings } from 'lucide-react-taro';
-import { House } from 'lucide-react-taro/icons/house';
+import { House, Settings } from 'miniprogram-icons';
+import { House } from 'miniprogram-icons/icons/house';
 ```
 
 ## 图标列表
@@ -96,13 +96,13 @@ import { House } from 'lucide-react-taro/icons/house';
 
 ```bash
 # 模糊查找（默认）
-pnpm dlx taro-lucide-find arrow
+pnpm dlx miniprogram-icons-find arrow
 
 # 精确查找
-pnpm dlx taro-lucide-find arrow-up --exact
+pnpm dlx miniprogram-icons-find arrow-up --exact
 
 # 列出所有图标
-pnpm dlx taro-lucide-find --list
+pnpm dlx miniprogram-icons-find --list
 ```
 
 ### 验证图标
@@ -110,7 +110,7 @@ pnpm dlx taro-lucide-find --list
 推荐在生成代码前，使用 `--json` 参数批量验证图标是否存在。
 
 ```bash
-pnpm dlx taro-lucide-find arrow-up user settings arw --json
+pnpm dlx miniprogram-icons-find arrow-up user settings arw --json
 ```
 
 **输出示例：**
@@ -143,13 +143,13 @@ pnpm dlx taro-lucide-find arrow-up user settings arw --json
 支持一次性生成所有 TabBar 图标。
 
 ```bash
-pnpm dlx taro-lucide-tabbar House Settings User -c "#999999" -a "#1890ff"
+pnpm dlx miniprogram-tabbar House Settings User -c "#999999" -a "#1890ff"
 ```
 
 ### 指定输出目录和尺寸
 
 ```bash
-pnpm dlx taro-lucide-tabbar House Settings User -c "#999999" -a "#1890ff" -o ./src/assets/tabbar -s 81
+pnpm dlx miniprogram-tabbar House Settings User -c "#999999" -a "#1890ff" -o ./src/assets/tabbar -s 81
 ```
 
 ### CLI 参数
@@ -194,7 +194,7 @@ export default defineAppConfig({
 通过 `LucideTaroProvider` 为子树中所有图标设置默认颜色和尺寸，避免每个图标重复传 props。优先级：`color` prop > `defaultColor` > 回退为黑色。
 
 ```tsx
-import { LucideTaroProvider, House, Settings } from 'lucide-react-taro';
+import { LucideTaroProvider, House, Settings } from 'miniprogram-icons';
 
 function App() {
   return (

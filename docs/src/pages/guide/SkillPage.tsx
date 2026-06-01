@@ -27,11 +27,11 @@ export default function SkillPage() {
           </p>
           <CodeBlock
             language="bash"
-            code={`npx skills add louisyoungx/lucide-react-taro`}
+            code={`npx skills add louisyoungx/miniprogram-icons`}
           />
           <p className="mt-4 mb-4 text-foreground/90 flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <span>或者，你也可以直接下载原始文件内容，作为自定义 Prompt 规则。</span>
-            <a href="/skill" download="lucide-react-taro-skill.md">
+            <a href="/skill" download="miniprogram-icons-skill.md">
               <Button variant="outline" className="gap-2">
                 <Download className="w-4 h-4" />
                 下载 SKILL.md
@@ -45,7 +45,7 @@ export default function SkillPage() {
           <ul className="list-disc pl-6 space-y-2 text-foreground/90 leading-relaxed">
             <li><strong>渲染原理</strong>：告知 AI 在小程序端是基于 <code>&lt;Image /&gt;</code> 渲染 SVG，需要使用 <code>color</code> 属性而非 <code>className="text-red-500"</code>。</li>
             <li><strong>代码示例</strong>：提供了正确的属性传递方法和常见的错误排查示例。</li>
-            <li><strong>CLI 工具链</strong>：AI 能够自主调用 <code>taro-lucide-find</code> 验证图标是否存在，或使用 <code>taro-lucide-tabbar</code> 生成 TabBar 用的 PNG 图标。</li>
+            <li><strong>CLI 工具链</strong>：AI 能够自主调用 <code>miniprogram-icons-find</code> 验证图标是否存在，或使用 <code>miniprogram-tabbar</code> 生成 TabBar 用的 PNG 图标。</li>
             <li><strong>注意事项</strong>：帮助 AI 规避诸如颜色继承、TabBar 路径等常见坑点。</li>
           </ul>
         </div>

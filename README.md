@@ -1,13 +1,13 @@
 <p align="center">
   <a href="https://lucide.rocke.top">
-    <img src="https://raw.githubusercontent.com/louisyoungx/lucide-react-taro/refs/heads/main/docs/public/assets/banner.svg" alt="Lucide - Beautiful & consistent icon toolkit made by the community. Open-source project and a fork of Feather Icons." width="480">
+    <img src="https://raw.githubusercontent.com/louisyoungx/miniprogram-icons/refs/heads/main/docs/public/assets/banner.svg" alt="Lucide - Beautiful & consistent icon toolkit made by the community. Open-source project and a fork of Feather Icons." width="480">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/louisyoungx/lucide-react-taro/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/lucide-react-taro" alt="license"></a>
-  <a href="https://www.npmjs.com/package/lucide-react-taro"><img src="https://img.shields.io/npm/v/lucide-react-taro" alt="npm version"></a>
-  <a href="https://www.npmjs.com/package/lucide-react-taro"><img src="https://img.shields.io/npm/dm/lucide-react-taro" alt="npm downloads"></a>
+  <a href="https://github.com/louisyoungx/miniprogram-icons/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/miniprogram-icons" alt="license"></a>
+  <a href="https://www.npmjs.com/package/miniprogram-icons"><img src="https://img.shields.io/npm/v/miniprogram-icons" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/miniprogram-icons"><img src="https://img.shields.io/npm/dm/miniprogram-icons" alt="npm downloads"></a>
 </p>
 
 <p align="center">
@@ -30,12 +30,12 @@
 
 ## AI 助手接入
 
-本项目提供了 [SKILL.md](https://github.com/louisyoungx/lucide-react-taro/blob/main/SKILL.md)，方便 AI 助手快速了解如何使用本库。
+本项目提供了 [SKILL.md](https://github.com/louisyoungx/miniprogram-icons/blob/main/SKILL.md)，方便 AI 助手快速了解如何使用本库。
 
 也可使用 skills CLI 一键安装到你的 AI 助手
 
 ```bash
-npx skills add louisyoungx/lucide-react-taro
+npx skills add louisyoungx/miniprogram-icons
 ```
 
 ## 特性
@@ -50,27 +50,27 @@ npx skills add louisyoungx/lucide-react-taro
 ## 安装
 
 ```bash
-npm install lucide-react-taro
+npm install miniprogram-icons
 # or
-yarn add lucide-react-taro
+yarn add miniprogram-icons
 # or
-pnpm add lucide-react-taro
+pnpm add miniprogram-icons
 ```
 
 ## 引入方式
 
 ```tsx
 // ✅ 推荐：主入口导入（已优化打包速度, 支持 tree-shaking）
-import { House, Settings, User } from 'lucide-react-taro';
+import { House, Settings, User } from 'miniprogram-icons';
 
 // 可选：子路径导入（适合只用少量图标的场景）
-import { House } from 'lucide-react-taro/icons/house';
+import { House } from 'miniprogram-icons/icons/house';
 ```
 
 ## 使用
 
 ```tsx
-import { House, Settings, User, Camera, Zap } from 'lucide-react-taro';
+import { House, Settings, User, Camera, Zap } from 'miniprogram-icons';
 
 // 基本用法
 <House />
@@ -111,7 +111,7 @@ import { House, Settings, User, Camera, Zap } from 'lucide-react-taro';
 通过 `LucideTaroProvider` 为所有子组件设置默认颜色和尺寸，避免在每个图标上重复传递 props：
 
 ```tsx
-import { LucideTaroProvider, House, Settings, Camera } from 'lucide-react-taro';
+import { LucideTaroProvider, House, Settings, Camera } from 'miniprogram-icons';
 
 // 所有子组件默认使用 #666 颜色和 20px 尺寸
 <LucideTaroProvider defaultColor="#666" defaultSize={20}>
@@ -144,7 +144,7 @@ import { LucideTaroProvider, House, Settings, Camera } from 'lucide-react-taro';
 ```tsx
 // 在你的项目类型声明文件（如 global.d.ts 或 taro-env.d.ts）中添加：
 export {};
-declare module 'lucide-react-taro' {
+declare module 'miniprogram-icons' {
   interface LucideTaroConfig {
     strictProps: true;
   }
@@ -160,7 +160,7 @@ declare module 'lucide-react-taro' {
 在 `strictProps` 模式下，如果已通过 `LucideTaroProvider` 设置了默认值，可以传入 `"inherit"` 来使用 Provider 的默认颜色和尺寸，而不必在每个图标上重复传值：
 
 ```tsx
-import { LucideTaroProvider, House, Settings } from 'lucide-react-taro';
+import { LucideTaroProvider, House, Settings } from 'miniprogram-icons';
 
 <LucideTaroProvider defaultColor="#666" defaultSize={20}>
   {/* inherit 表示使用 Provider 的默认值 */}
@@ -179,19 +179,19 @@ import { LucideTaroProvider, House, Settings } from 'lucide-react-taro';
 
 ```bash
 # 生成单个图标
-pnpm dlx taro-lucide-tabbar House -c "#999999"
+pnpm dlx miniprogram-tabbar House -c "#999999"
 
 # 生成带选中状态的图标（推荐）
-pnpm dlx taro-lucide-tabbar House -c "#999999" -a "#1890ff"
+pnpm dlx miniprogram-tabbar House -c "#999999" -a "#1890ff"
 
 # 批量生成多个图标
-pnpm dlx taro-lucide-tabbar House Settings User -c "#999999" -a "#1890ff"
+pnpm dlx miniprogram-tabbar House Settings User -c "#999999" -a "#1890ff"
 
 # 指定输出目录
-pnpm dlx taro-lucide-tabbar House -c "#999999" -o ./src/assets/tabbar
+pnpm dlx miniprogram-tabbar House -c "#999999" -o ./src/assets/tabbar
 
 # 指定尺寸（小程序推荐 81x81）
-pnpm dlx taro-lucide-tabbar House -c "#999999" -s 81
+pnpm dlx miniprogram-tabbar House -c "#999999" -s 81
 ```
 
 ### CLI 参数
@@ -244,16 +244,16 @@ export default defineAppConfig({
 
 ```bash
 # 模糊查找（默认）
-pnpm dlx taro-lucide-find arrow
+pnpm dlx miniprogram-icons-find arrow
 
 # 精确查找
-pnpm dlx taro-lucide-find arrow-up --exact
+pnpm dlx miniprogram-icons-find arrow-up --exact
 
 # 批量验证（输出 JSON，适合 AI 调用）
-pnpm dlx taro-lucide-find arrow-up user settings arw --json
+pnpm dlx miniprogram-icons-find arrow-up user settings arw --json
 
 # 列出所有图标
-pnpm dlx taro-lucide-find --list
+pnpm dlx miniprogram-icons-find --list
 ```
 
 ### 图标预览工具
@@ -262,10 +262,10 @@ pnpm dlx taro-lucide-find --list
 
 ```bash
 # 预览图标
-pnpm dlx taro-lucide-show ArrowUp
+pnpm dlx miniprogram-icons-show ArrowUp
 
 # 自定义大小和颜色
-pnpm dlx taro-lucide-show Heart -c "#ff3e98" -s 30
+pnpm dlx miniprogram-icons-show Heart -c "#ff3e98" -s 30
 ```
 
 ## 开发
@@ -285,11 +285,11 @@ npm test
 
 ```
 ├── packages/
-│   ├── lucide-react-taro/         # 主库源码与测试
+│   ├── miniprogram-icons/         # 主库源码与测试
 │   ├── generate/                  # 共享构建工具包
-│   ├── taro-lucide-tabbar/        # TabBar CLI 包
-│   ├── taro-lucide-find/          # 图标查找 CLI 包
-│   └── taro-lucide-show/          # 终端预览 CLI 包
+│   ├── miniprogram-tabbar/        # TabBar CLI 包
+│   ├── miniprogram-icons-find/          # 图标查找 CLI 包
+│   └── miniprogram-icons-show/          # 终端预览 CLI 包
 ├── docs/                          # 文档站
 └── .lucide-cache/                 # Lucide 上游图标缓存
 ```

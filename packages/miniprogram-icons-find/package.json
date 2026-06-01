@@ -1,0 +1,45 @@
+{
+  "name": "miniprogram-icons-find",
+  "version": "1.5.2",
+  "description": "CLI for searching Lucide icon names with exact match, fuzzy suggestions, full list output, and JSON mode for Taro workflows",
+  "main": "dist/index.js",
+  "bin": {
+    "miniprogram-icons-find": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "miniprogram-icons-generate build-cli --package-dir . --entry src/index.ts --outfile dist/index.js",
+    "clean": "rm -rf dist src/icon-list.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "lucide",
+    "taro",
+    "cli",
+    "search",
+    "icons",
+    "find",
+    "wechat",
+    "miniprogram"
+  ],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louisyoungx/miniprogram-icons.git",
+    "directory": "packages/miniprogram-icons-find"
+  },
+  "homepage": "https://lucide.rocke.top",
+  "bugs": {
+    "url": "https://github.com/louisyoungx/miniprogram-icons/issues"
+  },
+  "devDependencies": {
+    "@miniprogram-icons/generate": "workspace:*"
+  },
+  "dependencies": {
+    "commander": "^14.0.0",
+    "fuse.js": "^7.1.0"
+  }
+}

@@ -7,17 +7,17 @@ import { stdin as input, stdout as output } from 'node:process'
 const VERSION_FILES = [
   'package.json',
   'packages/generate/package.json',
-  'packages/lucide-react-taro/package.json',
-  'packages/taro-lucide-tabbar/package.json',
-  'packages/taro-lucide-find/package.json',
-  'packages/taro-lucide-show/package.json',
+  'packages/miniprogram-icons/package.json',
+  'packages/miniprogram-tabbar/package.json',
+  'packages/miniprogram-icons-find/package.json',
+  'packages/miniprogram-icons-show/package.json',
 ]
 
 const PUBLISH_PACKAGES = [
-  'packages/lucide-react-taro',
-  'packages/taro-lucide-tabbar',
-  'packages/taro-lucide-find',
-  'packages/taro-lucide-show',
+  'packages/miniprogram-icons',
+  'packages/miniprogram-tabbar',
+  'packages/miniprogram-icons-find',
+  'packages/miniprogram-icons-show',
 ]
 
 const VERSION_CHOICES = {
@@ -170,11 +170,11 @@ async function main() {
     const version = readRootVersion()
     syncPackageReadmes()
     run('pnpm', ['run', 'build:lib'])
-    run('pnpm', ['--filter', 'lucide-react-taro', 'publish', '--access', 'public', '--no-git-checks'])
+    run('pnpm', ['--filter', 'miniprogram-icons', 'publish', '--access', 'public', '--no-git-checks'])
     run('pnpm', ['run', 'build:cli'])
-    run('pnpm', ['--filter', 'taro-lucide-tabbar', 'publish', '--access', 'public', '--no-git-checks'])
-    run('pnpm', ['--filter', 'taro-lucide-find', 'publish', '--access', 'public', '--no-git-checks'])
-    run('pnpm', ['--filter', 'taro-lucide-show', 'publish', '--access', 'public', '--no-git-checks'])
+    run('pnpm', ['--filter', 'miniprogram-tabbar', 'publish', '--access', 'public', '--no-git-checks'])
+    run('pnpm', ['--filter', 'miniprogram-icons-find', 'publish', '--access', 'public', '--no-git-checks'])
+    run('pnpm', ['--filter', 'miniprogram-icons-show', 'publish', '--access', 'public', '--no-git-checks'])
     cleanupPackageReadmes()
     commitVersionChanges(version)
   } finally {

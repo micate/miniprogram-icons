@@ -1,6 +1,6 @@
 node_modules/
 dist/
-.lucide-cache/
+.cache/
 *.log
 .DS_Store
 coverage/

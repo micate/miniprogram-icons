@@ -1,42 +1,7 @@
 <p align="center">
-  <a href="https://lucide.rocke.top">
-    <img src="https://raw.githubusercontent.com/louisyoungx/miniprogram-icons/refs/heads/main/docs/public/assets/banner.svg" alt="Lucide - Beautiful & consistent icon toolkit made by the community. Open-source project and a fork of Feather Icons." width="480">
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/louisyoungx/miniprogram-icons/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/miniprogram-icons" alt="license"></a>
   <a href="https://www.npmjs.com/package/miniprogram-icons"><img src="https://img.shields.io/npm/v/miniprogram-icons" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/miniprogram-icons"><img src="https://img.shields.io/npm/dm/miniprogram-icons" alt="npm downloads"></a>
 </p>
-
-<p align="center">
-  <a href="https://lucide.rocke.top/icons/">图标</a>
-  ·
-  <a href="https://lucide.rocke.top/guide/">使用文档</a>
-  ·
-  <a href="https://lucide.rocke.top/license">开源协议</a>
-  ·
-  <a href="https://lucide.rocke.top/skill">SKILL</a>
-</p>
-
-# Lucide React Taro
-
-在 Taro 小程序中使用 [Lucide](https://lucide.dev/) 图标的高性能解决方案，提供图标组件和 TabBar PNG 图标生成 CLI 工具。
-
-- 使用文档：[https://lucide.rocke.top](https://lucide.rocke.top)
-
-- 查看所有图标：[https://lucide.rocke.top/icons](https://lucide.rocke.top/icons)
-
-## AI 助手接入
-
-本项目提供了 [SKILL.md](https://github.com/louisyoungx/miniprogram-icons/blob/main/SKILL.md)，方便 AI 助手快速了解如何使用本库。
-
-也可使用 skills CLI 一键安装到你的 AI 助手
-
-```bash
-npx skills add louisyoungx/miniprogram-icons
-```
 
 ## 特性
 

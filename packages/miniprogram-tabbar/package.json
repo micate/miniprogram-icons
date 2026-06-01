@@ -30,12 +30,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/louisyoungx/miniprogram-icons.git",
+    "url": "git+https://github.com/micate/miniprogram-icons.git",
     "directory": "packages/miniprogram-tabbar"
   },
   "homepage": "https://lucide.rocke.top",
   "bugs": {
-    "url": "https://github.com/louisyoungx/miniprogram-icons/issues"
+    "url": "https://github.com/micate/miniprogram-icons/issues"
   },
   "devDependencies": {
     "@miniprogram-icons/generate": "workspace:*"

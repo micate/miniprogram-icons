@@ -1,12 +1,6 @@
-This project (miniprogram-icons) is a wrapper for Lucide icons to support Taro framework.
-The LICENSE below is copied from the original Lucide project (https://github.com/lucide-icons/lucide).
-All copyrights belong to Lucide and its contributors.
-
 ---
 
 ISC License
-
-Copyright (c) for portions of Lucide are held by Cole Bemis 2013-2026 as part of Feather (MIT). All other copyright (c) for Lucide are held by Lucide Contributors 2026.
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
